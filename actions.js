@@ -1,7 +1,7 @@
 import uuid from uuid;
 
 //typ akcji
-const ADD_COMMENT = 'ADD_COMMENT';
+export const ADD_COMMENT = 'ADD_COMMENT';
 //kreator akcji
 function addComment(text) {
     return {
@@ -12,7 +12,7 @@ function addComment(text) {
     }
 }
 
-const REMOVE_COMMENT = 'REMOVE_COMMENT';
+export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
 function removeComment(id) {
     return {
@@ -20,7 +20,7 @@ function removeComment(id) {
         id
     }
 }
-const EDIT_COMMENT = 'EDIT_COMMENT';
+export const EDIT_COMMENT = 'EDIT_COMMENT';
 
 function editComment(text, id) {
     return {
@@ -30,21 +30,22 @@ function editComment(text, id) {
     }
 }
 
-const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
+export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 
 function thumbUpComment(votes, id) {
     return {
         type: THUMB_UP_COMMENT,
         id,
-        votes: votes++
+        votes: vote++
     }
 }
-const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
+
+export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 function thumbDownComment(votes, id) {
     return {
         type: THUMB_DOWN_COMMENT,
         id,
-        votes: votes--
+        votes: vote--
     }
 }
 
